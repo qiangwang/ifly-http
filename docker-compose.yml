@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ifly-http:
+    build: .
+    volumes:
+      - .:/data/app
+    ports:
+      - "9000:9000"
+    command: bash -c "npm install && ./node_modules/nodemon/bin/nodemon.js index.js --appId 59473c0c"

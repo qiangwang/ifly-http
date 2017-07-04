@@ -1,0 +1,22 @@
+{
+  "name": "ifly-http",
+  "version": "1.0.0",
+  "description": "讯飞语音服务",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:qiangwang/ifly-http.git"
+  },
+  "author": "qiangwang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "md5": "^2.2.1",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.11.0",
+    "shelljs": "^0.7.8"
+  }
+}
