@@ -31,3 +31,7 @@ RUN mkdir /opt/ifly-cli \
 COPY . /data/app/
 
 WORKDIR /data/app/
+
+RUN npm install
+
+RUN cp ./clean.sh /etc/cron.daily/ifly-clean.sh
