@@ -17,16 +17,16 @@ RUN mkdir /opt/gradle \
     && ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /bin/gradle \
     && rm gradle-${GRADLE_VERSION}-bin.zip
 
+ENV IFLY_CLI_VERSION 0.1
 RUN mkdir /opt/ifly-cli \
-    && wget https://github.com/qiangwang/ifly-cli/archive/v1.0.zip \
-    && unzip v1.0.zip \
-    && rm v1.0.zip \
-    && cd ifly-cli-1.0 \
+    && wget https://github.com/qiangwang/ifly-cli/archive/${IFLY_CLI_VERSION}.zip \
+    && unzip ${IFLY_CLI_VERSION}.zip \
+    && rm ${IFLY_CLI_VERSION}.zip \
+    && cd ifly-cli-${IFLY_CLI_VERSION} \
     && gradle build \
     && cp build/libs/ifly-cli.jar /opt/ifly-cli/Cli.jar \
-    && cp -r binLib /opt/ifly-cli \
     && cd .. \
-    && rm -r ifly-cli-1.0
+    && rm -r ifly-cli-${IFLY_CLI_VERSION}
 
 COPY . /data/app/
 

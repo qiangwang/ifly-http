@@ -46,7 +46,7 @@ app.get('/audioToText', function (req, res) {
         },
         toText: {
             name: '音频听写',
-            source: 'java -Djava.library.path="/opt/ifly-cli/binLib" -jar /opt/ifly-cli/Cli.jar audioToText --appId ' + argv.appId + ' -i ' + wavPath + ' -o ' + textPath 
+            source: 'java -Djava.library.path="/data/app" -jar /opt/ifly-cli/Cli.jar audioToText --appId ' + argv.appId + ' -i ' + wavPath + ' -o ' + textPath
         },
         readText: {
             name: '文本读取',

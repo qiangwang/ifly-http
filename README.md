@@ -5,5 +5,8 @@
 ##运行
 
 ```
+#先将你的libmsc64.so拷贝到此目录
+#调整docker-compose.yml中的appId跟libmsc64.so对应
+
 docker-compose up
 ```
